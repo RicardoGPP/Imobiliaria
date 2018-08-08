@@ -50,7 +50,7 @@
 		<beans:property name="pessoaDAO" ref="pessoaDAO"></beans:property>
 	</beans:bean>
 	
-	<context:component-scan base-package="br.com.imobiliaria.service" />
+	<context:component-scan base-package="br.com.imobiliaria.services" />
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
