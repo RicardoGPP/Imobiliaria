@@ -46,7 +46,7 @@
 	<beans:bean id="pessoaDAO" class="br.com.imobiliaria.dao.PessoaDAOImp">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
-	<beans:bean id="pessoaService" class="br.com.imobiliaria.service.PessoaServiceImp">
+	<beans:bean id="pessoaService" class="br.com.imobiliaria.services.PessoaServiceImp">
 		<beans:property name="pessoaDAO" ref="pessoaDAO"></beans:property>
 	</beans:bean>
 	
