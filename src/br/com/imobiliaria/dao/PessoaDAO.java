@@ -1,13 +1,9 @@
 package br.com.imobiliaria.dao;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.imobiliaria.entities.Pessoa;
 
-public interface PessoaDAO {
+public interface PessoaDAO extends JpaRepository<Pessoa, Long> {
 
-	
-	public void addPessoa(Pessoa p);
-	public List<Pessoa> listaPessoa();
-	
 }

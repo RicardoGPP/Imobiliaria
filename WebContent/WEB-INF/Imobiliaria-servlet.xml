@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:sec="http://www.springframework.org/schema/security" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http:/www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	   	http://www.springframework.org/schema/beans
+	   	http://www.springframework.org/schema/beans/spring-beans.xsd
+	   	http://www.springframework.org/schema/mvc
+	   	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	   	http://www.springframework.org/schema/context
+	   	http://www.springframework.org/schema/context/spring-context.xsd
+	   	http://www.springframework.org/schema/data/jpa
+	   	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+	   	http://www.springframework.org/schema/tx
+	   	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<mvc:annotation-driven />
+	
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" ></mvc:resources>
+	
+	<context:component-scan base-package="br.com.treinaweb.springmvc.controllers" />
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+	</bean>
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	<!-- Spring Data -->
+	
+	<!-- Conexão -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+		  <property name="driverClassName" value="org.postgresql.Driver"></property>
+		  <property name="url" value="jdbc:postgresql://localhost:5432/imobiliaria?useTimezone=true&amp;serverTimezone=UTC"></property>
+		  <property name="username" value="postgres"></property>
+		  <property name="password" value="root"></property>
+	</bean>
+	<!-- Gerenciar Conexão -->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		  <property name="dataSource" ref="dataSource"></property>
+		  <property name="packagesToScan" value="br.com.treinaweb.springmvc.dominios"></property>
+		  <property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
+		  </property>
+		  <property name="jpaProperties">
+		  	<props>
+			  	<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+			  	<prop key="hibernate.show_sql">true</prop>
+			  	<prop key="hibernate.hbm2ddl.auto">update</prop>
+		  	</props>
+		  </property>
+	</bean>
+	
+		
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
+	</bean>	         
+	
+	<jpa:repositories base-package="br.com.treinaweb.springmvc.repositorios"></jpa:repositories>
+</beans>
