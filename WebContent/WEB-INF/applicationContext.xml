@@ -43,14 +43,14 @@
 		</beans:property>
 	</beans:bean>
 
-	<beans:bean id="pessoaDAO" class="com.journaldev.springhibernate.dao.PersonDAOImpl">
+	<beans:bean id="pessoaDAO" class="br.com.imobiliaria.dao.PessoaDAOImp">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
-	<beans:bean id="personService" class="com.journaldev.springhibernate.service.PersonServiceImpl">
-		<beans:property name="personDAO" ref="personDAO"></beans:property>
+	<beans:bean id="pessoaService" class="br.com.imobiliaria.service.PessoaServiceImp">
+		<beans:property name="pessoaDAO" ref="pessoaDAO"></beans:property>
 	</beans:bean>
 	
-	<context:component-scan base-package="com.journaldev" />
+	<context:component-scan base-package="br.com.imobiliaria" />
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
