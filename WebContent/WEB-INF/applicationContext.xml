@@ -30,15 +30,14 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>br.com.imobiliaria.Pessoa</beans:value>
+				<beans:value>br.com.imobiliaria.entities.Pessoa</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
 			<beans:props>
-				<beans:prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect
-				</beans:prop>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</beans:prop>
 				<beans:prop key="hibernate.show_sql">true</beans:prop>
-				<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+				<beans:prop key="hibernate.hbm2ddl.auto">create</beans:prop>
 			</beans:props>
 		</beans:property>
 	</beans:bean>
@@ -46,6 +45,7 @@
 	<beans:bean id="pessoaDAO" class="br.com.imobiliaria.dao.PessoaDAOImp">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
+	
 	<beans:bean id="pessoaService" class="br.com.imobiliaria.services.PessoaServiceImp">
 		<beans:property name="pessoaDAO" ref="pessoaDAO"></beans:property>
 	</beans:bean>

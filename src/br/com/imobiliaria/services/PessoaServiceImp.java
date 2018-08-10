@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import br.com.imobiliaria.entities.Pessoa;
 
 @Service
-@ManagedBean(name="personService")
+@ManagedBean(name="pessoaServiceImp")
 @SessionScoped
 public class PessoaServiceImp implements PessoaService {
 
