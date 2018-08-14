@@ -12,10 +12,11 @@
 		</locale-config>
 	</application>
 	
+	<!-- JSF and Spring are integrated -->
 	<application>
-        <el-resolver>
-            org.springframework.web.jsf.el.SpringBeanFacesELResolver
-        </el-resolver>
-    </application>
+		<el-resolver>
+			org.springframework.web.jsf.el.SpringBeanFacesELResolver
+		</el-resolver>
+	</application>
 
 </faces-config>

@@ -1,13 +1,12 @@
 package br.com.imobiliaria.services;
 
-import java.util.List;
-
 import br.com.imobiliaria.entities.Pessoa;
 
 public interface PessoaService {
-
 	
-	public void addPerson(Pessoa p);
-	public List<Pessoa> listaPessoas();
+	void persistUser(Pessoa pessoa);
+	Pessoa findUserById(int id);
+	void updateUser(Pessoa pessoa);
+	void deleteUser(Pessoa Pessoa);
 	
 }

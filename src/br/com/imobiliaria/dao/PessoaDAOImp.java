@@ -1,45 +1,41 @@
 package br.com.imobiliaria.dao;
 
-import java.util.List;
-
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import br.com.imobiliaria.entities.Pessoa;
 
+@Repository("pessoDAO")
 public class PessoaDAOImp implements PessoaDAO {
-
-	private static final Logger logger = LoggerFactory.getLogger(PessoaDAOImp.class);
-	 
-    private SessionFactory sessionFactory;
 	
-    public void setSessionFactory(SessionFactory sf){
-        this.sessionFactory = sf;
-    }
-    
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+
 	@Override
-	public void addPessoa(Pessoa p) {
+	public void persistUser(Pessoa pessoa) {
 		// TODO Auto-generated method stub
-		
-		Session session = this.sessionFactory.getCurrentSession();
-        session.persist(p);
-        logger.info("Pessoa saved successfully, Pessoa Details="+p);
-		
+		sessionFactory.getCurrentSession().persist(pessoa);
 	}
 
 	@Override
-	public List<Pessoa> listPessoas() {
+	public Pessoa findUserById(int id) {
 		// TODO Auto-generated method stub
-		
-		 Session session = this.sessionFactory.getCurrentSession();
-	        List<Pessoa> pessoaLista = session.createQuery("from pessoa").list();
-	        for(Pessoa p : pessoaLista){
-	            logger.info("Person List::"+p);
-	        }
-		
-		return pessoaLista;
+		return (Pessoa) sessionFactory.getCurrentSession().get(Pessoa.class, id);
 	}
+
+	@Override
+	public void updateUser(Pessoa pessoa) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().update(pessoa);
+	}
+
+	@Override
+	public void deleteUser(Pessoa pessoa) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().delete(pessoa);
+	}
+
 
 }
