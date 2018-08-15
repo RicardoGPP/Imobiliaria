@@ -14,25 +14,25 @@ public class PessoaDAOImp implements PessoaDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void persistUser(Pessoa pessoa) {
+	public void persistPessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().persist(pessoa);
 	}
 
 	@Override
-	public Pessoa findUserById(int id) {
+	public Pessoa findPessoaById(int id) {
 		// TODO Auto-generated method stub
 		return (Pessoa) sessionFactory.getCurrentSession().get(Pessoa.class, id);
 	}
 
 	@Override
-	public void updateUser(Pessoa pessoa) {
+	public void updatePessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().update(pessoa);
 	}
 
 	@Override
-	public void deleteUser(Pessoa pessoa) {
+	public void deletePessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().delete(pessoa);
 	}

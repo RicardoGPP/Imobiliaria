@@ -16,30 +16,30 @@ public class PessoaServiceImp implements PessoaService{
 	
 	@Transactional
 	@Override
-	public void persistUser(Pessoa pessoa) {
+	public void persistPessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
-		dao.persistUser(pessoa);
+		dao.persistPessoa(pessoa);
 	}
 
 	@Transactional
 	@Override
-	public Pessoa findUserById(int id) {
+	public Pessoa findPessoaById(int id) {
 		// TODO Auto-generated method stub
-		return dao.findUserById(id);
+		return dao.findPessoaById(id);
 	}
 
 	@Transactional
 	@Override
-	public void updateUser(Pessoa pessoa) {
+	public void updatePessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
-		dao.updateUser(pessoa);
+		dao.updatePessoa(pessoa);
 	}
 
 	@Transactional
 	@Override
-	public void deleteUser(Pessoa pessoa) {
+	public void deletePessoa(Pessoa pessoa) {
 		// TODO Auto-generated method stub
-		dao.deleteUser(pessoa);
+		dao.deletePessoa(pessoa);
 	}
 	
 }

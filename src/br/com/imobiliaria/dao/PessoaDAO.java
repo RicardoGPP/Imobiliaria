@@ -4,8 +4,8 @@ import br.com.imobiliaria.entities.Pessoa;
 
 public interface PessoaDAO {
 	
-		void persistUser(Pessoa pessoa);
-		Pessoa findUserById(int id);
-		void updateUser(Pessoa pessoa);
-		void deleteUser(Pessoa pessoa);
+		void persistPessoa(Pessoa pessoa);
+		Pessoa findPessoaById(int id);
+		void updatePessoa(Pessoa pessoa);
+		void deletePessoa(Pessoa pessoa);
 }

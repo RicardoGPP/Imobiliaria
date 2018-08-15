@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="title">Imobiliaria - ABC</ui:insert></title>
+	<link rel="StyleSheet" type="text/css"
+		href="${facesContext.externalContext.request.contextPath}/resources/css/bootstrap.min.css" />
+    <h:outputScript name="/resources/js/bootstrap.min.js"/>
+    <h:outputScript name="/resources/js/jquery.min.js"/>
+    <h:outputScript name="/resources/js/popper.min.js"/>
+
+</h:head>
+
+<h:body>
+	<div id="fullContent">
+		<div id="footer">
+			<ui:insert name="footer">
+				<ui:include src="/WEB-INF/templates/header.xhtml" />
+			</ui:insert>
+		</div>
+	</div>
+
+	<div id="footer">
+		<ui:insert name="footer">
+			<ui:include src="/WEB-INF/templates/footer.xhtml" />
+		</ui:insert>
+	</div>
+
+</h:body>
+
+</html>
