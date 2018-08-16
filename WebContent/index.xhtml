@@ -5,16 +5,18 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:cc="http://java.sun.com/jsf/composite">
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:b="http://bootsfaces.net/ui">
 
 
 <ui:composition template="/WEB-INF/templates/basicTemplate.xhtml">
 	<ui:define name="content">
-		<h:body>
+		
 			<h:form>
+			
+				<b:button value="Primary" look="primary"/>
 
 			</h:form>
-		</h:body>
 	</ui:define>
 </ui:composition>
 </html>
