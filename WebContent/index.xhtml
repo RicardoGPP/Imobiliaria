@@ -20,20 +20,20 @@
 			    	<h3 class="panel-title">Bem Vindo!</h3>
 			 	</div>
 			  	<div class="panel-body">
-					<form accept-charset="UTF-8" role="form">
+					<h:form accept-charset="UTF-8" role="form">
 						<fieldset>
 							<div class="form-group">
 			    		    	<b:inputText class="form-control" placeholder="Usuário" name="usuario" type="text"/>
 				    		</div>
 				    		<div class="form-group">
-				    			<b:inputText class="form-control" placeholder="Senha" name="senha" type="password" value=""/>
+				    			<b:inputText class="form-control" placeholder="Senha" name="senha" type="password" />
 				    		</div>
 			   
-				    		<b:inputText class="btn btn-lg btn-success btn-block" type="submit" value="Login"/>
+				    		<b:commandButton class="btn btn-lg btn-success btn-block" onclick="#{loginMB.carregarDashboard()}" value="Entrar"/>
 			    		
 				    		<p class="mt-5 mb-3 text-muted text-center">Todos os direitos reservado</p>
 				    	</fieldset>
-			      	</form>
+			      	</h:form>
                     <hr/>
 			    </div>
 			</div>
