@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"   
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:cc="http://java.sun.com/jsf/composite">
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:b="http://bootsfaces.net/ui">
 
+<h:head>
+
+<div class="dropup">
+  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    		Dropup
+    		<span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    		<li><a href="#">Action</a></li>
+    		<li><a href="#">Another action</a></li>
+    		<li><a href="#">Something else here</a></li>
+    		<li role="separator" class="divider"></li>
+    		<li><a href="#">Separated link</a></li>
+  		</ul>
+	</div>
+
+
+</h:head>
+
+	
+
+
+	<b:navBar brand="ABC Imobiliaria" class="topnavbar-wrapper" brandHref="#" fluid="true" inverse="true">
+	
+	<ul class="navbar-nav mr-auto flex-row">
+		<li class="nav-item">
+			<b:navLink href="#" iconAwesome="fa-bars"></b:navLink>
+		</li>
+		
+		<li class="nav-item">
+			<b:navLink href="#" iconAwesome="fa-user"></b:navLink>
+		</li>
+		
+		<li class="nav-item">
+			<b:navLink href="#" iconAwesome="fa-lock"></b:navLink>
+		</li>
+	</ul>
+
+	</b:navBar>
 
 </html>

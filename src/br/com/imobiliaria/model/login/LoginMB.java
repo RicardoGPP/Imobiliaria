@@ -1,12 +1,13 @@
 package br.com.imobiliaria.model.login;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+
+import org.springframework.web.context.annotation.SessionScope;
 
 import br.com.imobiliaria.view.Paginas;
 
 @ManagedBean(name = "loginMB")
-@SessionScoped
+@SessionScope
 public class LoginMB {
 
 	

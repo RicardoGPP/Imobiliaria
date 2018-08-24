@@ -29,7 +29,7 @@
 				    			<b:inputText class="form-control" placeholder="Senha" name="senha" type="password" />
 				    		</div>
 			   
-				    		<b:commandButton class="btn btn-lg btn-success btn-block" onclick="#{loginMB.carregarDashboard()}" value="Entrar"/>
+			   				<h:commandButton class="btn btn-lg btn-success btn-block" action="#{loginMB.carregarDashboard}" value="Entrar"/>
 			    		
 				    		<p class="mt-5 mb-3 text-muted text-center">Todos os direitos reservado</p>
 				    	</fieldset>
@@ -40,7 +40,6 @@
 		</div>
 	</div>
 </div>
-
 
 </ui:define>
 </ui:composition>
