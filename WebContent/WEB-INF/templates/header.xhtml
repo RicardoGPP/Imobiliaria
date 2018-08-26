@@ -15,24 +15,22 @@
 </h:head>
 <h:form>
 
+	<div>
+		<b:navBar brand="ABC Imobiliaria" brandHref="#" fluid="true">
+			<b:navbarLinks>
+				<b:navLink value="Link" href="#"></b:navLink>
+				<b:navLink value="Link" href="#"></b:navLink>
+			</b:navbarLinks>
 
-	<b:navBar brand="ABC Imobiliaria" class="topnavbar-wrapper" brandHref="#" fluid="true" inverse="true">
-		<ul class="navbar-nav mr-auto flex-row">
-			<li class="nav-item"><b:navLink href="#" iconAwesome="fa-bars"></b:navLink>
-			</li>
-
-			<li class="nav-item"><b:navLink href="#" iconAwesome="fa-user"></b:navLink>
-			</li>
-
-			<li class="nav-item"><b:navLink href="#" iconAwesome="fa-lock"></b:navLink>
-			</li>
-		</ul>
-
-	</b:navBar>
+			<!-- Following line is needed for TBS 3.0.1 (panel content overflow issue) -->
+			<b:navbarLinks pull="right">
+				<b:navLink value="" href="#"></b:navLink>
+			</b:navbarLinks>
+			<b:navbarLinks pull="right" styleClass="hidden-xs">
+				<b:navLink value="Link" href="#"></b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+	</div>
 
 </h:form>
-
-
-
-
 </html>

@@ -12,34 +12,57 @@
 <ui:composition template="/WEB-INF/templates/basicTemplate.xhtml">
 <ui:define name="content">
 
-<div class="container" style="padding-top:10%">
-    <div class="row">
-    	<div class="col-md-4 col-md-offset-4">
-    		<div class="panel panel-default">
-			  	<div class="panel-heading">
-			    	<h3 class="panel-title">Bem Vindo!</h3>
-			 	</div>
-			  	<div class="panel-body">
-					<h:form accept-charset="UTF-8" role="form">
-						<fieldset>
-							<div class="form-group">
-			    		    	<b:inputText class="form-control" placeholder="Usuário" name="usuario" type="text"/>
-				    		</div>
-				    		<div class="form-group">
-				    			<b:inputText class="form-control" placeholder="Senha" name="senha" type="password" />
-				    		</div>
-			   
-			   				<h:commandButton class="btn btn-lg btn-success btn-block" action="#{loginMB.carregarDashboard}" value="Entrar"/>
-			    		
-				    		<p class="mt-5 mb-3 text-muted text-center">Todos os direitos reservado</p>
-				    	</fieldset>
-			      	</h:form>
-                    <hr/>
-			    </div>
-			</div>
-		</div>
-	</div>
-</div>
+<h:form id="loginForm">
+	<b:container layout="fluid">
+	<b:panel title="login" look="primary" collapsible="false">
+	<b:row>
+
+		<b:column medium-screen="1" >
+			<h:outputText value="Username:" for="username" />
+		</b:column>
+
+		<b:column medium-screen="4" tooltip="Por favor digitar a usuário.">
+		<b:inputText placeholder="Username" id="username" value="#{loginMB.username}">
+			<f:facet name="prepend">
+				<b:icon name="user" />
+            </f:facet>
+		</b:inputText>
+        </b:column>
+
+		<b:column medium-screen="6" style-class="message">
+			<b:message for="username" />
+        </b:column>
+	</b:row>
+		
+	<b:row>
+		<b:column medium-screen="1">
+			<h:outputText value="Password:" />
+        </b:column>
+        <b:column medium-screen="4" tooltip="Por favor digitar a senha.">
+			<b:inputSecret placeholder="Password" id="password" value="#{loginMB.password}">
+				<f:facet name="prepend">
+					<b:iconAwesome name="key" />
+				</f:facet>
+			</b:inputSecret>
+		</b:column>
+		<b:column medium-screen="6" styleClass="message">
+			<b:message for="password" line-break-tag=""/>
+        </b:column>
+	</b:row>
+		
+	<b:row>
+		<b:column span="2" offset="1">
+			<b:commandButton value="login" action="#{loginMB.login()}" update="@form" look="primary" style="width:100%" />
+
+		</b:column>
+			
+		<b:column span="2">
+			<b:commandButton value="Esqueci minha senha" onclick="ajax:loginMB.forgotPassword()" update="@form" look="danger" style="width:100%" />
+		</b:column>
+	</b:row>
+	</b:panel>	
+	</b:container>
+</h:form>
 
 </ui:define>
 </ui:composition>
