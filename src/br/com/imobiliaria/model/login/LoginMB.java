@@ -1,5 +1,7 @@
 package br.com.imobiliaria.model.login;
 
+import java.io.Serializable;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -12,7 +14,12 @@ import br.com.imobiliaria.view.Paginas;
 
 @ManagedBean(name="loginMB")
 @RequestScoped
-public class LoginMB {
+public class LoginMB implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Size(min=4, max=10, message="tamanho deve ser entre 4 e 10 caracteres")
 	@NotEmpty
@@ -24,7 +31,7 @@ public class LoginMB {
 	 
 	
 	public String login() {
-		if("BootsFaces".equalsIgnoreCase(username) && "rocks!".equalsIgnoreCase(password)) {
+		if("admin".equalsIgnoreCase(username) && "admin".equalsIgnoreCase(password)) {
 			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Congratulations! You've successfully logged in.");
 			FacesContext.getCurrentInstance().addMessage("loginForm:password", msg);
 		}else{

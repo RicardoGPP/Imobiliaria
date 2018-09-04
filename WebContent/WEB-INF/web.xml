@@ -24,7 +24,7 @@
 	<!-- Change to "Production" when you are ready to deploy -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
-		<param-value>Development</param-value>
+		<param-value>Production</param-value>
 	</context-param>
 	
 	<!-- Welcome page -->
@@ -60,5 +60,10 @@
             30
         </session-timeout>
     </session-config>
+
+	<context-param>
+   		<param-name>com.sun.faces.enableRestoreView11Compatibility</param-name>
+   		<param-value>true</param-value>
+	</context-param>
 
 </web-app>

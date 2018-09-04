@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"   
@@ -11,10 +8,90 @@
     xmlns:cc="http://java.sun.com/jsf/composite"
     xmlns:b="http://bootsfaces.net/ui">
 
-
 <ui:composition template="/WEB-INF/templates/basicTemplate.xhtml">
 <ui:define name="content">
-		teste
+
+<h:form>
+<b:container fluid="true">
+
+
+<div class="content-wrapper">
+	<div class="content-heading">
+	<div>
+		<div>
+			Dashboard
+		</div>
+		<div style="clear: left; float: left;">
+			Bem vindo ao Portal ABC - Imobiliaria
+		</div>
+	</div>
+	<div class="ml-auto">
+		<div class="btn-group">
+			<b:commandButton value="Atualizar" update="@form" look="primary" style="width:100%" />
+		</div>
+	</div>
+	</div>
+	
+	<b:row>
+		<b:column medium-screen="3">
+			<div>
+			<div class="cardIcon">
+				<b:iconAwesome value="fa-cloud-upload" size="4x" />
+			</div>
+			<div class="card">
+				<div><h2>Teste</h2></div>
+				<div>Teste 23</div>
+			</div>
+			</div>
+		</b:column>
+		
+		<b:column medium-screen="3">
+			<div>
+			<div class="cardIcon">
+				<b:iconAwesome value="fa-globe" size="4x" />
+			</div>
+			<div class="card">
+				<div><h2>Teste</h2></div>
+				<div>Teste 23</div>
+			</div>
+			</div>
+		</b:column>
+		
+		<b:column medium-screen="3">
+			<div>
+			<div class="cardIcon">
+				<div>
+					<b:iconAwesome value="fa-wechat" size="4x" />
+				</div>
+			</div>			
+			<div class="card">
+				<div><h2>Teste</h2></div>
+				<div>Teste 23</div>
+			</div>
+			</div>
+		</b:column>
+		
+		<b:column medium-screen="3">
+			<div>
+			<div class="cardIcon">
+				<b:iconAwesome value="fa-warning" size="4x" />
+			</div>
+			
+			<div class="card">
+				<div><h2>Teste</h2></div>
+				<div>Teste 23</div>
+			</div>
+			</div>
+		</b:column>
+	
+	</b:row>
+	
+</div>
+
+</b:container>
+</h:form>		
+		
+		
 </ui:define>
 </ui:composition>
 </html>

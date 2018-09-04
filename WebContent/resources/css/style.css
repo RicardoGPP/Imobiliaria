@@ -1,0 +1,47 @@
+.content-wrapper .content-heading {
+    margin: -20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.content-wrapper .content-heading {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #929292;
+    margin: -15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-weight: 400;
+    background-color: #fafbfc;
+    border-bottom: 1px solid #cfdbe2;
+}
+
+.ml-auto, .mx-auto{
+	margin-left: auto!important;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.card{
+	width: 200px;
+	height: 80px;
+	background-color: #5d9cec;
+	color: #fff!important;
+	float: left;
+	margin-top: 0!important;
+	text-align: center;
+}
+
+.cardIcon{
+	width: 100px;
+	height: 80px;
+	background-color: #2f80e7;
+    color: #fff!important;
+	float: left;
+}
