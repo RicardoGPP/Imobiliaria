@@ -56,12 +56,11 @@
 			
 			<b:column medium-screen="3"></b:column>
 			<b:column span="2" offset="1">
-				<b:commandButton value="Login" action="#{loginMB.login()}" update="@form" look="primary" style="width:100%" />
-	
+				<h:commandButton value="Login" action="#{loginMB.login()}"  update="@form" look="primary" style="width:100%" class="btn btn-primary"/>
 			</b:column>
 				
 			<b:column span="2">
-				<b:commandButton value="Esqueci minha senha" onclick="ajax:loginMB.forgotPassword()" update="@form" look="danger" style="width:100%" />
+				<h:commandButton value="Login" action="#{loginMB.forgotPassword()}"  update="@form" look="primary" style="width:100%" class="btn btn-danger"/>
 			</b:column>
 		</b:row>
 	

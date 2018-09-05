@@ -28,7 +28,6 @@ public class LoginMB implements Serializable {
 	@Size(min=4, max=10, message="tamanho deve ser entre 4 e 10 caracteres")
 	@NotEmpty
 	private String password;
-	 
 	
 	public String login() {
 		if("admin".equalsIgnoreCase(username) && "admin".equalsIgnoreCase(password)) {

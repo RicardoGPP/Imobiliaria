@@ -10,7 +10,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
+	<script type="text/javascript" src="${facesContext.externalContext.request.contextPath}/resources/js/jquery.js"></script>
+	<script type="text/javascript" src="${facesContext.externalContext.request.contextPath}/resources/js/bootstrap.js"></script>
+	<script type="text/javascript" src="${facesContext.externalContext.request.contextPath}/resources/js/popper.js"></script>
+	
 	<link rel="StyleSheet" type="text/css" href="${facesContext.externalContext.request.contextPath}/resources/css/style.css" />
+	<link rel="StyleSheet" type="text/css" href="${facesContext.externalContext.request.contextPath}/resources/css/bootstrap.min.css" />
 </h:head>
 
 <h:body>
@@ -22,7 +27,7 @@
 		</div>
 	</div>
 
-	<div id="content" style="float: left; width: 100%">
+	<div id="content" style="float: left; width: 100%; padding-top: 10%">
 		<ui:insert name="content">
 
 		</ui:insert>

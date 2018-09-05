@@ -1,97 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"   
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:cc="http://java.sun.com/jsf/composite"
-    xmlns:b="http://bootsfaces.net/ui">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:b="http://bootsfaces.net/ui">
 
 <ui:composition template="/WEB-INF/templates/basicTemplate.xhtml">
-<ui:define name="content">
+	<ui:define name="content">
 
-<h:form>
-<b:container fluid="true">
-
-
-<div class="content-wrapper">
-	<div class="content-heading">
-	<div>
-		<div>
-			Dashboard
-		</div>
-		<div style="clear: left; float: left;">
-			Bem vindo ao Portal ABC - Imobiliaria
-		</div>
-	</div>
-	<div class="ml-auto">
-		<div class="btn-group">
-			<b:commandButton value="Atualizar" update="@form" look="primary" style="width:100%" />
-		</div>
-	</div>
-	</div>
-	
-	<b:row>
-		<b:column medium-screen="3">
-			<div>
-			<div class="cardIcon">
-				<b:iconAwesome value="fa-cloud-upload" size="4x" />
-			</div>
-			<div class="card">
-				<div><h2>Teste</h2></div>
-				<div>Teste 23</div>
-			</div>
-			</div>
-		</b:column>
-		
-		<b:column medium-screen="3">
-			<div>
-			<div class="cardIcon">
-				<b:iconAwesome value="fa-globe" size="4x" />
-			</div>
-			<div class="card">
-				<div><h2>Teste</h2></div>
-				<div>Teste 23</div>
-			</div>
-			</div>
-		</b:column>
-		
-		<b:column medium-screen="3">
-			<div>
-			<div class="cardIcon">
-				<div>
-					<b:iconAwesome value="fa-wechat" size="4x" />
+	<h:form>
+		<b:container fluid="true">
+			<div class="content-wrapper">
+				<div class="content-heading">
+					<div>
+						<div>Dashboard</div>
+						<div style="clear: left; float: left;">Bem vindo ao Portal
+							ABC - Imobiliaria</div>
+					</div>
+					<div class="ml-auto">
+						<div class="btn-group">
+							<b:commandButton value="Atualizar" update="@form" look="primary"
+								style="width:100%" />
+						</div>
+					</div>
 				</div>
-			</div>			
-			<div class="card">
-				<div><h2>Teste</h2></div>
-				<div>Teste 23</div>
-			</div>
-			</div>
-		</b:column>
-		
-		<b:column medium-screen="3">
-			<div>
-			<div class="cardIcon">
-				<b:iconAwesome value="fa-warning" size="4x" />
+
+				<div class="row">
+					<div class="col-xl-3 col-md-6">
+						<!-- START card-->
+						<div
+							class="card flex-row align-items-center align-items-stretch border-0">
+							<div
+								class="col-4 d-flex align-items-center bg-primary-dark justify-content-center rounded-left">
+								<span class="glyphicon glyphicon-asterisk fa-3x"></span>
+							</div>
+							<div class="col-8 py-3 bg-primary rounded-right">
+								<div class="h2 mt-0">1700</div>
+								<div class="text-uppercase">Casas Alugadas</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<!-- START card-->
+						<div
+							class="card flex-row align-items-center align-items-stretch border-0">
+							<div
+								class="col-4 d-flex align-items-center bg-purple-dark justify-content-center rounded-left">
+								<span class="glyphicon glyphicon-asterisk fa-3x"></span>
+							</div>
+							<div class="col-8 py-3 bg-purple rounded-right">
+								<div class="h2 mt-0">
+									700
+								</div>
+								<div class="text-uppercase">Manutenções</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6 col-md-12">
+						<!-- START card-->
+						<div
+							class="card flex-row align-items-center align-items-stretch border-0">
+							<div
+								class="col-4 d-flex align-items-center bg-green-dark justify-content-center rounded-left">
+								<span class="glyphicon glyphicon-asterisk fa-3x"></span>
+							</div>
+							<div class="col-8 py-3 bg-green rounded-right">
+								<div class="h2 mt-0">500</div>
+								<div class="text-uppercase">Acessos</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-3 col-lg-6 col-md-12">
+						<!-- START card-->
+						<div
+							class="card flex-row align-items-center align-items-stretch border-0">
+							<div
+								class="col-4 d-flex align-items-center bg-green-dark justify-content-center rounded-left">
+								<span class="glyphicon glyphicon-asterisk fa-3x"></span>
+							</div>
+							<div class="col-8 py-3 bg-green rounded-right">
+								<div class="h2 mt-0">500</div>
+								<div class="text-uppercase">Clientes</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			
-			<div class="card">
-				<div><h2>Teste</h2></div>
-				<div>Teste 23</div>
+			<div class="row" style="padding-top: 10px">
+				<div class="col-xl-9">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="card card-default card-demo">
+								<div class="card-header">
+									<div class="card-title">Estatística</div>
+								</div>
+							</div>
+							
+							<div class="card-wrapper collapse show">
+								<div class="card-body">
+									Gráfico  
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xl-3">
+					<div class="card card-default">
+						<div class="card-body">
+							<div class="text-info">Estatística</div>
+							<div class="text-center py-4">
+								Gráfico
+							</div>
+							
+							<div class="card-footer">
+                  				<p class="text-muted">
+                    				<span>Métas:</span>
+                    				<span class="text-dark">1000 Casas</span>
+                  				</p>
+                			</div>
+						</div>
+					</div>
+				
+				
+				<div class="card card-default">
+                <div class="card-header">
+                  <div class="card-title">Ultimas atividades</div>
+                </div>
+                <div class="list-group">
+                  <div class="list-group-item">
+                    <div class="media">
+                      <div class="align-self-start mr-2">
+                        <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-purple"></em>
+                                    <em class="fas fa-cloud-upload-alt fa-stack-1x fa-inverse text-white"></em>
+                                 </span>
+                      </div>
+                      <div class="media-body text-truncate">
+                        <p class="mb-1">
+                          <a class="text-purple m-0" href="#">Reunião</a>
+                        </p>
+                        <p class="m-0">
+                          <small>
+                            <a href="#">Reunião para novas tendências</a>
+                          </small>
+                        </p>
+                      </div>
+                      <div class="ml-auto">
+                        <small class="text-muted ml-2">1d</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="media">
+                      <div class="align-self-start mr-2">
+                        <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-info"></em>
+                                    <em class="far fa-file-alt fa-stack-1x fa-inverse text-white"></em>
+                                 </span>
+                      </div>
+                      <div class="media-body text-truncate">
+                        <p class="mb-1">
+                          <a class="text-info m-0" href="#">Lançamento novo apartamento</a>
+                        </p>
+                        <p class="m-0">
+                          <small>
+                            <a href="#">Reunião para novo apartamento</a>
+                          </small>
+                        </p>
+                      </div>
+                      <div class="ml-auto">
+                        <small class="text-muted ml-2">2h</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-item">
+                    <div class="media">
+                      <div class="align-self-start mr-2">
+                        <span class="fa-stack">
+                                    <em class="fa fa-circle fa-stack-2x text-danger"></em>
+                                    <em class="fa fa-exclamation fa-stack-1x fa-inverse text-white"></em>
+                                 </span>
+                      </div>
+                      <div class="media-body text-truncate">
+                        <p class="mb-1">
+                          <a class="text-danger m-0" href="#">Treinamento</a>
+                        </p>
+                        <p class="m-0">
+                          <a href="#">Treinamento Sistema</a>
+                        </p>
+                      </div>
+                      <div class="ml-auto">
+                        <small class="text-muted ml-2">5h</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+				</div>
 			</div>
-			</div>
-		</b:column>
-	
-	</b:row>
-	
-</div>
+			
+		</b:container>
+	</h:form>
 
-</b:container>
-</h:form>		
-		
-		
-</ui:define>
+
+	</ui:define>
 </ui:composition>
 </html>
