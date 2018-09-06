@@ -19,6 +19,9 @@
 </h:head>
 
 <h:body>
+
+<div class="wrapper">
+
 	<div id="fullContent">
 		<div id="footer">
 			<ui:insert name="footer">
@@ -27,7 +30,7 @@
 		</div>
 	</div>
 
-	<div id="content" style="float: left; width: 100%; padding-top: 10%">
+	<div id="content">
 		<ui:insert name="content">
 
 		</ui:insert>
@@ -38,7 +41,8 @@
 			<ui:include src="/WEB-INF/templates/footer.xhtml" />
 		</ui:insert>
 	</div>
-
+	
+</div>
 </h:body>
 
 </html>

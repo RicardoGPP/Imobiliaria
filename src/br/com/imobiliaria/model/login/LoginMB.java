@@ -40,8 +40,8 @@ public class LoginMB implements Serializable {
 		
 		return Paginas.PAGINA_DASHBOARD;
 	}
-	
-	 public void forgotPassword() {
+
+	public void forgotPassword() {
 		 FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Default user name: BootsFaces");
 		 FacesContext.getCurrentInstance().addMessage("loginForm:username", msg);
 		 msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Default password: rocks!");

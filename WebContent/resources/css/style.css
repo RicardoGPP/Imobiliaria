@@ -12,6 +12,7 @@
     border-bottom: 1px solid #cfdbe2;
 }
  
+/* cores dos avissos */
 .bg-primary-dark {
     background-color: #2f80e7;
     color: #fff!important;
@@ -39,4 +40,37 @@
 .bg-green {
     background-color: #37bc9b;
     color: #fff!important;
+}
+
+/* fundo do dashboard */
+.content-wrapper {
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.15);
+    margin-top: -1px;
+}
+
+/* tratar imagem */
+.thumb32 {
+    width: 32px!important;
+    height: 32px!important;
+}
+.circle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 500px;
+    margin: 0 .5em;
+    background-color: #ddd;
+    vertical-align: baseline;
+    border: 2px solid transparent;
+}
+
+/* div basicLayout */
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
 }
