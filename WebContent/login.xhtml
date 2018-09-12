@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:cc="http://java.sun.com/jsf/composite"
+    xmlns:b="http://bootsfaces.net/ui">
+
+<ui:composition template="/WEB-INF/templates/basicTemplate.xhtml">
+<ui:define name="content">
+
+<h:form id="loginForm">
+	<b:container layout="fluid">
+	
+		<b:row>
+			<b:column medium-screen="3"></b:column>
+			<b:column medium-screen="1" >
+				<h:outputText value="Usuário" for="username" />
+			</b:column>
+	
+			<b:column medium-screen="4" tooltip="Por favor digitar a usuário.">
+			<b:inputText placeholder="Username" id="username" value="#{loginMB.username}">
+				<f:facet name="prepend">
+					<b:icon name="user" />
+	            </f:facet>
+			</b:inputText>
+	        </b:column>
+	        
+	        <b:column medium-screen="4" style-class="message">
+				<b:message for="username" />
+	        </b:column>
+		</b:row>
+		
+		<b:row>
+			<b:column medium-screen="3"></b:column>
+			<b:column medium-screen="1">
+				<h:outputText value="Senha:" />
+	        </b:column>
+	        <b:column medium-screen="4" tooltip="Por favor digitar a senha.">
+				<b:inputSecret placeholder="Password" id="password" value="#{loginMB.password}">
+					<f:facet name="prepend">
+						<b:iconAwesome name="key" />
+					</f:facet>
+				</b:inputSecret>
+			</b:column>
+			
+			<b:column medium-screen="4" styleClass="message">
+				<b:message for="password" line-break-tag=""/>
+	        </b:column>
+		</b:row>
+		
+		<b:row>
+			
+			<b:column medium-screen="3"></b:column>
+			<b:column span="2" offset="1">
+				<h:commandButton value="Login" action="#{loginMB.login()}"  update="@form" look="primary" style="width:100%" class="btn btn-primary"/>
+			</b:column>
+				
+			<b:column span="2">
+				<h:commandButton value="Login" action="#{loginMB.forgotPassword()}"  update="@form" look="primary" style="width:100%" class="btn btn-danger"/>
+			</b:column>
+		</b:row>
+	
+	
+	
+		
+	</b:container>
+</h:form>
+
+</ui:define>
+</ui:composition>
+</html>
